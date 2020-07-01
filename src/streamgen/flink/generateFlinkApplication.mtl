@@ -81,6 +81,15 @@ public class [aModel.name/] {
 		[generateFlinkCsvFileSink(c)/]
 	[elseif (hasStereotype(c, 'TextFileSink'))]
 		[generateFlinkTextFileSink(c)/]
+
+	[comment] 
+	Tensorflow Add-On 
+	[/comment]
+
+	[elseif (hasStereotype(c, 'FlinkBinaryFileSource'))]
+		[generateFlinkBinaryFileSource(c)/]
+	[elseif (hasStereotype(c, 'TensorflowTransformation'))]
+		[generateTensorflowTransformation(c)/]
 	[/if]
 [/for]
 

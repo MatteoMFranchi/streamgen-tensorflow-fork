@@ -23,3 +23,13 @@
 		DataStream<[getOutputsConveyed(aClass)->first()/]> [getOutputNames()->first()/] = env
 			.addSource(new FlinkKafkaConsumer010<>("[aClass.name.toString()/]", new SimpleStringSchema(), [aClass.name.toString().concat('_kafkaParams')/]));
 [/template]
+
+[template public generateFlinkBinaryFileSource(aClass : Class)]
+ImageInputFormat inputFormat = new ImageInputFormat();
+		DataStreamSource<byte[ '[' /][ ']' /]> [getOutputNames(aClass) ->first()/] = env.readFile(inputFormat, [getStereotypeProperty(aClass, 'FlinkBinaryFileSource', 'pathToFile')/], FileProcessingMode.PROCESS_CONTINUOUSLY,1000)
+			[if getParallelism(aClass, 'FlinkBinaryFileSource').toString().toInteger() > 1 ]
+			.setParallelism([getParallelism(aClass, 'FlinkBinaryFileSource')/]);
+			[else]
+			;
+			[/if]
+[/template]

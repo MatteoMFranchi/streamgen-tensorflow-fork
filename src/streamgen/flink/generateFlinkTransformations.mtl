@@ -129,3 +129,42 @@
 		;
 		[/if]  
 [/template]
+
+[template public generateTensorflowTransformation(aClass : Class)
+{input : DirectedRelationship = getInputs(aClass)->first();}]
+	TensorflowTools t = new TensorflowTools();
+		byte[ '[' /][ ']' /] graphDef = t.readAllBytesOrExit(Paths.get([getStereotypeProperty(aClass, 'TensorflowTransformation', 'pathToFolder')/], "tensorflow_inception_graph.pb"));
+	    List<String> labels = t.readAllLinesOrExit(Paths.get(args[ '[' /]0[ ']' /], "imagenet_comp_graph_label_strings.txt"));
+		DataStream<Tensor<Float>> tensor = [input.eGet('name')/].map(new MapFunction<byte[ '[' /][ ']' /],Tensor<Float>>(){
+
+			@Override
+			public Tensor<Float> map(byte[ '[' /][ ']' /] imageBytes) throws Exception {
+				return t.constructAndExecuteGraphToNormalizeImage(imageBytes);
+			}
+		}).[if getParallelism(aClass, 'TensorflowTransformation').toString().toInteger() > 1 ]
+			.setParallelism([getParallelism(aClass, 'TensorflowTransformation')/]);
+			[else]
+			;
+			[/if]
+		
+		DataStream<float[ '[' /][ ']' /]> probabilities = tensor.map(new MapFunction<Tensor<Float>,float[ '[' /][ ']' /]>(){
+
+			@Override
+			public float[ '[' /][ ']' /] map(Tensor<Float> tensor) throws Exception {
+				return t.executeInceptionGraph(graphDef, tensor);
+			}
+		})[if getParallelism(aClass, 'TensorflowTransformation').toString().toInteger() > 1 ]
+			.setParallelism([getParallelism(aClass, 'TensorflowTransformation')/]);
+			[else]
+			;
+			[/if]
+		
+		DataStream<String> [getOutputNames(aClass)->first()/] = probabilities.map(new MapFunction<float[ '[' /][ ']' /],String>(){
+
+			@Override
+			public String map(float[ '[' /][ ']' /] probabilities) throws Exception {
+				int[ '[' /][ ']' /] bestIndexes = t.bestThreeProbabilities(probabilities);
+				return new String(String.format("Most likely: %s\n", labels.get(bestIndexes[ '[' /]0[ ']' /])));
+			}
+		});
+[/template]
