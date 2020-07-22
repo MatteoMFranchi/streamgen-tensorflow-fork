@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:StreamUML="http:///schemas/StreamUML/_UMVt8C4NEeqCOcyk054zJg/118" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/StreamUML/_UMVt8C4NEeqCOcyk054zJg/118 ../../streamgen-master/profile/StreamUML.profile.uml#_UMfe8C4NEeqCOcyk054zJg">
-  <uml:Model xmi:id="_WXYjQCsaEeqFjojOAmW5YA" name="JohnnyUML">
-    <packagedElement xmi:type="uml:Model" xmi:id="_6_UpICsdEeqDVeTtTG5bXw" name="JohnnyUML">
-      <packagedElement xmi:type="uml:Class" xmi:id="_HNoZECseEeqDVeTtTG5bXw" name="BinaryDataSource"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_o5hr8CseEeqDVeTtTG5bXw" name="Transformation "/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_pgtnwCseEeqDVeTtTG5bXw" name="ResultPrinter"/>
-      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_4YmCACseEeqDVeTtTG5bXw" name="imagesBytes" informationSource="_HNoZECseEeqDVeTtTG5bXw" informationTarget="_o5hr8CseEeqDVeTtTG5bXw">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:StreamUML="http:///schemas/StreamUML/_wSfr8MvwEeq8H4fgm0Hs_A/116" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/StreamUML/_wSfr8MvwEeq8H4fgm0Hs_A/116 ../profile/StreamUML.profile.uml#_wSivQMvwEeq8H4fgm0Hs_A">
+  <uml:Model xmi:id="_9YUckMqZEeqtyskyCPbAhg" name="johnnyJava">
+    <packagedElement xmi:type="uml:Model" xmi:id="_IGAHQMqaEeqtyskyCPbAhg" name="JohnnyUML">
+      <packagedElement xmi:type="uml:Class" xmi:id="_hUXNIMqaEeqtyskyCPbAhg" name="BinaryDataSource">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_hKrfoMvtEeq1QIopPGusYw" annotatedElement="_hUXNIMqaEeqtyskyCPbAhg">
+          <body>pathToFolder=args[1]</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_injTUMqaEeqtyskyCPbAhg" name="TensorflowTransformation">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_qL3W0MvuEeq1QIopPGusYw" annotatedElement="_injTUMqaEeqtyskyCPbAhg">
+          <body>pathToFolder=args[0]</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_lQwxQMqaEeqtyskyCPbAhg" name="ResultPrinter"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_vHY4IMqaEeqtyskyCPbAhg" name="imageBytes" informationSource="_hUXNIMqaEeqtyskyCPbAhg" informationTarget="_injTUMqaEeqtyskyCPbAhg">
         <conveyed xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByteArray"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_6CGWcCseEeqDVeTtTG5bXw" name="labelResults" informationSource="_o5hr8CseEeqDVeTtTG5bXw" informationTarget="_pgtnwCseEeqDVeTtTG5bXw">
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_wFZYgMqaEeqtyskyCPbAhg" name="labelResults" informationSource="_injTUMqaEeqtyskyCPbAhg" informationTarget="_lQwxQMqaEeqtyskyCPbAhg">
         <conveyed xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </packagedElement>
-      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_B1kyAC4NEeqCOcyk054zJg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eNFaIC4NEeqm-KQzhE1p_Q" source="PapyrusVersion">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eNFaIS4NEeqm-KQzhE1p_Q" key="Version" value="0.0.119"/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eNFaIi4NEeqm-KQzhE1p_Q" key="Comment" value=""/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eNFaIy4NEeqm-KQzhE1p_Q" key="Copyright" value=""/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eNFaJC4NEeqm-KQzhE1p_Q" key="Date" value="2020-01-03"/>
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eNFaJS4NEeqm-KQzhE1p_Q" key="Author" value=""/>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_bxKqUMqaEeqtyskyCPbAhg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BLkh4MvxEeqw7cQwVZks_w" source="PapyrusVersion">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BLkh4cvxEeqw7cQwVZks_w" key="Version" value="0.0.117"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BLkh4svxEeqw7cQwVZks_w" key="Comment" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BLkh48vxEeqw7cQwVZks_w" key="Copyright" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BLkh5MvxEeqw7cQwVZks_w" key="Date" value="2020-07-22"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BLkh5cvxEeqw7cQwVZks_w" key="Author" value=""/>
         </eAnnotations>
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_B1kyAS4NEeqCOcyk054zJg" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <references xmi:type="ecore:EPackage" href="../streamgen-master/profile/StreamUML.profile.uml#_UMfe8C4NEeqCOcyk054zJg"/>
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bxKqUcqaEeqtyskyCPbAhg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="../profile/StreamUML.profile.uml#_wSivQMvwEeq8H4fgm0Hs_A"/>
         </eAnnotations>
-        <appliedProfile xmi:type="uml:Profile" href="../streamgen-master/profile/StreamUML.profile.uml#_Ke2mwGuREeeNCPsCczzD3A"/>
+        <appliedProfile xmi:type="uml:Profile" href="../profile/StreamUML.profile.uml#_Ke2mwGuREeeNCPsCczzD3A"/>
       </profileApplication>
     </packagedElement>
-    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_W0AZkJkSEeqtmua6W8mG0g">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_W0COwJkSEeqtmua6W8mG0g" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="../../streamgen-master/profile/StreamUML.profile.uml#_UMfe8C4NEeqCOcyk054zJg"/>
-      </eAnnotations>
-      <appliedProfile xmi:type="uml:Profile" href="../../streamgen-master/profile/StreamUML.profile.uml#_Ke2mwGuREeeNCPsCczzD3A"/>
-    </profileApplication>
   </uml:Model>
-  <StreamUML:FlinkApplication xmi:id="_C3b3oC4NEeqCOcyk054zJg" base_Model="_6_UpICsdEeqDVeTtTG5bXw"/>
-  <StreamUML:FlinkBinaryFileSource xmi:id="_E8FP8C4NEeqCOcyk054zJg" base_Class="_HNoZECseEeqDVeTtTG5bXw" pathToFile="args[1]"/>
-  <StreamUML:TensorflowTransformation xmi:id="_GxTFIC4NEeqCOcyk054zJg" base_Class="_o5hr8CseEeqDVeTtTG5bXw" pathToFolder="args[0]"/>
-  <StreamUML:TextFileSink xmi:id="_IeGlMC4NEeqCOcyk054zJg" base_Class="_pgtnwCseEeqDVeTtTG5bXw" filepath="args[1]&quot; +&quot; \\output\\results.txt"/>
+  <StreamUML:FlinkApplication xmi:id="_c142sMqaEeqtyskyCPbAhg" base_Model="_IGAHQMqaEeqtyskyCPbAhg"/>
+  <StreamUML:FlinkBinaryFileSource xmi:id="_3uGPQMqaEeqtyskyCPbAhg" base_Class="_hUXNIMqaEeqtyskyCPbAhg"/>
+  <StreamUML:FlinkTensorflowTransformation xmi:id="_OUGLwMqbEeqtyskyCPbAhg" base_Class="_injTUMqaEeqtyskyCPbAhg"/>
+  <StreamUML:TextFileSink xmi:id="_fbxeYMqbEeqtyskyCPbAhg" base_Class="_lQwxQMqaEeqtyskyCPbAhg"/>
 </xmi:XMI>

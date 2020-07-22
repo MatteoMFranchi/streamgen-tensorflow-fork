@@ -88,8 +88,8 @@ public class [aModel.name/] {
 
 	[elseif (hasStereotype(c, 'FlinkBinaryFileSource'))]
 		[generateFlinkBinaryFileSource(c)/]
-	[elseif (hasStereotype(c, 'TensorflowTransformation'))]
-		[generateTensorflowTransformation(c)/]
+	[elseif (hasStereotype(c, 'FlinkTensorflowTransformation'))]
+		[generateFlinkTensorflowTransformation(c)/]
 	[/if]
 [/for]
 

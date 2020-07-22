@@ -26,7 +26,7 @@
 
 [template public generateFlinkBinaryFileSource(aClass : Class)]
 ImageInputFormat inputFormat = new ImageInputFormat();
-		DataStreamSource<byte[ '[' /][ ']' /]> [getOutputNames(aClass) ->first()/] = env.readFile(inputFormat, [getStereotypeProperty(aClass, 'FlinkBinaryFileSource', 'pathToFile')/], FileProcessingMode.PROCESS_CONTINUOUSLY,1000)
+		DataStreamSource<byte[ '[' /][ ']' /]> [getOutputNames(aClass) ->first()/] = env.readFile(inputFormat, [getStereotypeProperty(aClass, 'FlinkBinaryFileSource', 'pathToFolder')/], FileProcessingMode.PROCESS_CONTINUOUSLY,1000)
 			[if getParallelism(aClass, 'FlinkBinaryFileSource').toString().toInteger() > 1 ]
 			.setParallelism([getParallelism(aClass, 'FlinkBinaryFileSource')/]);
 			[else]

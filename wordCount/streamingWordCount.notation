@@ -354,7 +354,7 @@
     <element xsi:nil="true"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_azTTwnHNEeq_PLFG5KmoEA" x="380" y="160"/>
   </children>
-  <styles xmi:type="notation:StringValueStyle" xmi:id="_u5qdgWu-EeeNCPsCczzD3A" name="diagram_compatibility_version" stringValue="1.4.0"/>
+  <styles xmi:type="notation:StringValueStyle" xmi:id="_u5qdgWu-EeeNCPsCczzD3A" name="diagram_compatibility_version" stringValue="1.3.0"/>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_u5qdgmu-EeeNCPsCczzD3A"/>
   <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_gLJOoMkIEeepVfwPr-Y6_w" diagramKindId="org.eclipse.papyrus.uml.diagram.class">
     <owner xmi:type="uml:Model" href="streamingWordCount.uml#_u4upYGu-EeeNCPsCczzD3A"/>
