@@ -92,6 +92,13 @@
 		  <version>1.4.2</version>
 		</dependency>
 		[/if]
+		[if (aModel.eAllContents(Class) -> exists(c | hasStereotype(c, 'FlinkBinaryFileSource'))) or (aModel.eAllContents(Class) -> exists(c | hasStereotype(c, 'FlinkTensorflowTransformation')))]
+		<dependency>
+		  <groupId>streamgen-tensorflow</groupId>
+  		  <artifactId>streamgen-tensorflow-module</artifactId>
+  		  <version>0.0.1-SNAPSHOT-launcher</version>
+		</dependency>
+		[/if]
 	</dependencies>
 
 	<profiles>

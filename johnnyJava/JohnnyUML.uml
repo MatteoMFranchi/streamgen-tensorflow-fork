@@ -35,7 +35,7 @@
     </packagedElement>
   </uml:Model>
   <StreamUML:FlinkApplication xmi:id="_c142sMqaEeqtyskyCPbAhg" base_Model="_IGAHQMqaEeqtyskyCPbAhg"/>
-  <StreamUML:FlinkBinaryFileSource xmi:id="_3uGPQMqaEeqtyskyCPbAhg" base_Class="_hUXNIMqaEeqtyskyCPbAhg"/>
-  <StreamUML:FlinkTensorflowTransformation xmi:id="_OUGLwMqbEeqtyskyCPbAhg" base_Class="_injTUMqaEeqtyskyCPbAhg"/>
+  <StreamUML:FlinkBinaryFileSource xmi:id="_3uGPQMqaEeqtyskyCPbAhg" base_Class="_hUXNIMqaEeqtyskyCPbAhg" pathToFolder="args[1]"/>
+  <StreamUML:FlinkTensorflowTransformation xmi:id="_OUGLwMqbEeqtyskyCPbAhg" base_Class="_injTUMqaEeqtyskyCPbAhg" pathToFolder="args[0]"/>
   <StreamUML:TextFileSink xmi:id="_fbxeYMqbEeqtyskyCPbAhg" base_Class="_lQwxQMqaEeqtyskyCPbAhg"/>
 </xmi:XMI>
